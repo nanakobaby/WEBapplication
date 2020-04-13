@@ -11,6 +11,4 @@ server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'test.html.erb')
 server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'new.html.erb')
 server.mount('/indicate.cgi', WEBrick::HTTPServlet::CGIHandler, 'indicate.rb')#<form action='indicate.cgi'> 〜 </form>の内部にある値を、indicate.rbに送信することができるようになります。
 server.mount('/goya.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
-server.mount('/goya1.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
-server.mount('/goya2.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
 server.start
